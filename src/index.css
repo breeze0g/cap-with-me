@@ -1,0 +1,598 @@
+.Start {
+  text-align: center;
+  border-radius: 2em;
+  position: relative; 
+}
+
+.start-title {
+  font-family: monospace;
+  font-size: 2em;
+}
+
+.start-link {   
+  font-size: 1em;
+ 
+  text-decoration: solid;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  display: inline-block;
+  position: absolute;  
+  top: -5px;           
+  right: 15px;    
+}
+
+
+.start-link:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+.below-image {
+  display: block;
+  margin-top: -10px;
+  width: 100vw;      
+  height: 500px;        
+  object-fit: cover;
+  position: relative;     
+  left: 50%;       
+  right: 50%;            
+  margin-left: -50vw; 
+  margin-right: -50vw; 
+  border-radius: 0;     
+}
+
+.how {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+  top: 10px;
+  left: 46px;
+  margin-top: 40px;  
+  font-size: 2.5em; 
+}
+
+.how-your {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+  left: 3em;
+  margin-bottom: 30px; 
+}
+
+
+.image-gallery {
+  display: flex;           
+  flex-wrap: nowrap;       
+  overflow-x: auto;        
+  gap: 24px;               
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding-left: 20px;      
+  padding-right: 20px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+
+.image-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.image-gallery::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.image-gallery::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.image-gallery::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.image-card {
+  text-align: center;
+  flex-shrink: 0;
+  width: 300px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.image-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-text {
+  margin-top: 12px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.image-card:hover .image-text {
+  color: #666;
+}
+
+.green-image {
+  border-radius: 16px;
+  margin-top: 90px;
+  height: 400px;
+  width: 500px;
+  flex-shrink: 0;
+}
+
+.offer {
+  display: flex;   
+  align-items: center;    
+  gap: 30px;               
+  text-align: left;        
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.offer-text {
+  display: flex;
+  flex-direction: column; 
+}
+
+.offer h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2em;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.offer p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+.start-link2 {
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.start-link2:hover {
+  background-color: #333;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 60px 40px 30px;
+  margin-top: 60px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-bottom: 1px solid #333;
+  padding-bottom: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 160px;
+}
+
+.footer-column h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.footer-column p {
+  font-size: 0.85em;
+  line-height: 1.6;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.85em;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.3em;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #aaa;
+  transform: translateY(-3px);
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.newsletter input {
+  padding: 12px;
+  border: 1px solid #333;
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.85em;
+}
+
+.newsletter input::placeholder {
+  color: #666;
+}
+
+.newsletter button {
+  padding: 12px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #ddd;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  color: #666;
+  font-size: 0.8em;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.payment-icons i {
+  font-size: 1.3em;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.payment-icons i:hover {
+  color: #fff;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer-column {
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Home Page Styles */
+.home-header {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background-color: beige;
+  margin-bottom: 0;
+}
+
+.home-title {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3em;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.home-description {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.home-hero-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Image Gallery - Horizontal then wrap down */
+.home-gallery {
+  display: flex;
+  flex-wrap: wrap;           /* Wraps down when doesn't fit */
+  justify-content: center;   /* Centers the row */
+  gap: 30px;                 /* Space between cards */
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* Product Card */
+.product-card {
+  width: 280px;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.product-price {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2em;
+  color: #b8860b;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.buy-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.buy-btn:hover {
+  background-color: #333;
+}
+
+/* Responsive - Adjusts number of columns */
+@media (max-width: 1200px) {
+  .product-card {
+    width: 260px;
+  }
+}
+
+@media (max-width: 900px) {
+  .product-card {
+    width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 20px);
+    min-width: 200px;
+  }
+  
+  .home-title {
+    font-size: 2em;
+  }
+  
+  .section-title {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .home-hero-image {
+    height: 300px;
+  }
+}
+
+/* Add to your App.css */
+.product-container {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.product-image {
+  flex: 1;
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-details h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 1.8em;
+  color: #b8860b;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.payment-form {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background-color: #f9f9f9;
+}
+
+.card-element-wrapper {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  margin: 15px 0;
+}
+
+.pay-btn {
+  background-color: black;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.pay-btn:hover {
+  background-color: #333;
+}
+
+.pay-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+.success {
+  color: green;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
