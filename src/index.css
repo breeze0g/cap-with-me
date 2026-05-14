@@ -1,3 +1,12 @@
+/* ========== BASE STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* ========== START PAGE STYLES ========== */
 .Start {
   text-align: center;
   border-radius: 2em;
@@ -11,7 +20,6 @@
 
 .start-link {   
   font-size: 1em;
- 
   text-decoration: solid;
   padding: 0.5em;
   border-radius: 0.5em;
@@ -21,11 +29,11 @@
   right: 15px;    
 }
 
-
 .start-link:hover {
   transform: scale(1.05);
   transition: all 0.3s ease;
 }
+
 .below-image {
   display: block;
   margin-top: -10px;
@@ -56,7 +64,7 @@
   margin-bottom: 30px; 
 }
 
-
+/* Image Gallery - Horizontal Scroll */
 .image-gallery {
   display: flex;           
   flex-wrap: nowrap;       
@@ -69,7 +77,6 @@
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
-
 
 .image-gallery::-webkit-scrollbar {
   height: 8px;
@@ -88,7 +95,6 @@
 .image-gallery::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
 
 .image-card {
   text-align: center;
@@ -178,7 +184,245 @@
   background-color: #333;
 }
 
-/* Footer Styles */
+/* ========== HOME PAGE STYLES ========== */
+.home-header {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background-color: beige;
+  margin-bottom: 0;
+}
+
+.home-title {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3em;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.home-description {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.home-hero-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Home Gallery - Grid */
+.home-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* Product Card */
+.product-card {
+  width: 280px;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.product-price {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2em;
+  color: #b8860b;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.buy-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.buy-btn:hover {
+  background-color: #333;
+}
+
+/* ========== PRODUCT PAGE STYLES ========== */
+.product-container {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.product-image {
+  flex: 1;
+  width: 100%;
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.product-details {
+  flex: 1;
+  width: 100%;
+}
+
+.product-details h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 1.8em;
+  color: #b8860b;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #667eea;
+  text-decoration: none;
+}
+
+/* Payment Form */
+.payment-form {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background-color: #f9f9f9;
+}
+
+.card-element-wrapper {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  margin: 15px 0;
+}
+
+.pay-btn {
+  background-color: black;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.pay-btn:hover {
+  background-color: #333;
+}
+
+.pay-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+.success {
+  color: green;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+/* Product Not Found */
+.product-not-found {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.back-to-shop {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+/* ========== FOOTER STYLES ========== */
 .footer {
   background-color: #0a0a0a;
   color: #fff;
@@ -322,152 +566,7 @@
   color: #fff;
 }
 
-/* Responsive Footer */
-@media (max-width: 768px) {
-  .footer {
-    padding: 40px 20px 20px;
-  }
-  
-  .footer-container {
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .footer-column {
-    text-align: center;
-  }
-  
-  .social-links {
-    justify-content: center;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* Home Page Styles */
-.home-header {
-  text-align: center;
-  padding: 60px 20px 30px;
-  background-color: beige;
-  margin-bottom: 0;
-}
-
-.home-title {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 3em;
-  margin-bottom: 15px;
-  letter-spacing: 2px;
-}
-
-.home-description {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.2em;
-  color: #555;
-}
-
-.home-hero-image {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  display: block;
-}
-
-.home-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.section-title {
-  text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-.section-subtitle {
-  text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.1em;
-  color: #666;
-  margin-bottom: 40px;
-}
-
-/* Image Gallery - Horizontal then wrap down */
-.home-gallery {
-  display: flex;
-  flex-wrap: wrap;           /* Wraps down when doesn't fit */
-  justify-content: center;   /* Centers the row */
-  gap: 30px;                 /* Space between cards */
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-
-/* Product Card */
-.product-card {
-  width: 280px;
-  text-decoration: none;
-  background-color: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.product-card img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  display: block;
-}
-
-.product-info {
-  padding: 16px;
-  text-align: center;
-}
-
-.product-info h3 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.1em;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.product-price {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.2em;
-  color: #b8860b;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.buy-btn {
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 0.9em;
-  transition: background-color 0.3s ease;
-  width: 100%;
-}
-
-.buy-btn:hover {
-  background-color: #333;
-}
-
-/* Responsive - Adjusts number of columns */
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
 @media (max-width: 1200px) {
   .product-card {
     width: 260px;
@@ -493,6 +592,48 @@
   .section-title {
     font-size: 1.8em;
   }
+  
+  .product-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .footer {
+    padding: 40px 20px 20px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer-column {
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .offer {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .how {
+    left: 0;
+    text-align: center;
+  }
+  
+  .how-your {
+    left: 0;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -504,359 +645,13 @@
   .home-hero-image {
     height: 300px;
   }
-}
-
-/* Add to your App.css */
-.product-container {
-  display: flex;
-  gap: 50px;
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 20px;
-}
-
-.product-image {
-  flex: 1;
-}
-
-.product-image img {
-  width: 100%;
-  border-radius: 16px;
-}
-
-.product-details {
-  flex: 1;
-}
-
-.product-details h1 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 2em;
-  margin-bottom: 15px;
-}
-
-.price {
-  font-size: 1.8em;
-  color: #b8860b;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.payment-form {
-  margin-top: 30px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  background-color: #f9f9f9;
-}
-
-.card-element-wrapper {
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: white;
-  margin: 15px 0;
-}
-
-.pay-btn {
-  background-color: black;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 25px;
-  font-size: 1.1em;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 15px;
-}
-
-.pay-btn:hover {
-  background-color: #333;
-}
-
-.pay-btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-.error {
-  color: red;
-  font-size: 0.9em;
-  margin: 10px 0;
-}
-
-.success {
-  color: green;
-  font-size: 0.9em;
-  margin: 10px 0;
-}
-
-@media (max-width: 768px) {
-  .product-container {
-    flex-direction: column;
-    padding: 20px;
+  
+  .below-image {
+    height: 300px;
   }
-}
-
-/* Make everything responsive */
-* {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* Product container - mobile first */
-.product-container {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  gap: 20px;
-}
-
-@media (min-width: 768px) {
-  .product-container {
-    flex-direction: row;
-    padding: 40px;
-    gap: 40px;
+  
+  .green-image {
+    width: 100%;
+    height: auto;
   }
-}
-
-/* Product image - full width on mobile */
-.product-image {
-  width: 100%;
-}
-
-.product-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-/* Product details */
-.product-details {
-  width: 100%;
-  padding: 16px;
-}
-
-/* Price and button */
-.price {
-  font-size: 28px;
-  font-weight: bold;
-  color: #333;
-}
-
-.pay-btn {
-  width: 100%;
-  padding: 14px;
-  font-size: 18px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-/* Products grid on home page */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  padding: 16px;
-}
-
-@media (min-width: 768px) {
-  .products-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-}
-
-/* Product cards */
-.product-card {
-  padding: 12px;
-  border-radius: 12px;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.product-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* Add viewport meta tag to index.html */
-/* Make sure this is in your index.html <head> */
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-/* Mobile Responsive Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Home Gallery - Mobile First */
-.home-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  padding: 16px;
-}
-
-@media (min-width: 768px) {
-  .home-gallery {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    padding: 24px;
-  }
-}
-
-/* Product Cards */
-.product-card {
-  text-decoration: none;
-  color: #333;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-4px);
-}
-
-.product-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .product-card img {
-    height: 140px;
-  }
-}
-
-.product-info {
-  padding: 12px;
-}
-
-.product-info h3 {
-  font-size: 14px;
-  margin-bottom: 6px;
-  color: #333;
-}
-
-.product-price {
-  font-weight: bold;
-  color: #667eea;
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.buy-btn {
-  width: 100%;
-  padding: 8px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 12px;
-  transition: opacity 0.2s;
-}
-
-.buy-btn:hover {
-  opacity: 0.9;
-}
-
-/* Product Page - Mobile First */
-.product-container {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .product-container {
-    flex-direction: row;
-    padding: 40px;
-    gap: 48px;
-  }
-}
-
-.product-image {
-  width: 100%;
-}
-
-.product-image img {
-  width: 100%;
-  border-radius: 16px;
-}
-
-.product-details {
-  width: 100%;
-}
-
-.product-details h1 {
-  font-size: 24px;
-  margin-bottom: 12px;
-}
-
-.price {
-  font-size: 32px;
-  font-weight: bold;
-  color: #667eea;
-  margin-bottom: 16px;
-}
-
-.description {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: #667eea;
-  text-decoration: none;
-}
-
-/* Product Not Found */
-.product-not-found {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.back-to-shop {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #667eea;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
-}
-
-/* Section Titles */
-.section-title {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 28px;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.home-container {
-  min-height: 100vh;
 }
