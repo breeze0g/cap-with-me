@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100%;
 }
 
 /* ========== START PAGE STYLES ========== */
@@ -36,7 +35,6 @@
 
 .below-image {
   display: block;
-  margin-top: -10px;
   width: 100vw;      
   height: 500px;        
   object-fit: cover;
@@ -51,7 +49,6 @@
 .how {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   position: relative;
-  top: 10px;
   left: 46px;
   margin-top: 40px;  
   font-size: 2.5em; 
@@ -64,7 +61,6 @@
   margin-bottom: 30px; 
 }
 
-/* Image Gallery - Horizontal Scroll */
 .image-gallery {
   display: flex;           
   flex-wrap: nowrap;       
@@ -216,7 +212,6 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 40px 20px;
-  min-height: 100vh;
 }
 
 .section-title {
@@ -224,7 +219,6 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 2.5em;
   margin-bottom: 10px;
-  margin-top: 20px;
 }
 
 .section-subtitle {
@@ -235,7 +229,6 @@
   margin-bottom: 40px;
 }
 
-/* Home Gallery - Grid */
 .home-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -245,7 +238,6 @@
   margin-bottom: 50px;
 }
 
-/* Product Card */
 .product-card {
   width: 280px;
   text-decoration: none;
@@ -317,7 +309,6 @@
 
 .product-image {
   flex: 1;
-  width: 100%;
 }
 
 .product-image img {
@@ -327,7 +318,6 @@
 
 .product-details {
   flex: 1;
-  width: 100%;
 }
 
 .product-details h1 {
@@ -349,14 +339,6 @@
   margin-bottom: 24px;
 }
 
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: #667eea;
-  text-decoration: none;
-}
-
-/* Payment Form */
 .payment-form {
   margin-top: 30px;
   padding: 20px;
@@ -382,44 +364,10 @@
   font-size: 1.1em;
   cursor: pointer;
   width: 100%;
-  margin-top: 15px;
 }
 
 .pay-btn:hover {
   background-color: #333;
-}
-
-.pay-btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-.error {
-  color: red;
-  font-size: 0.9em;
-  margin: 10px 0;
-}
-
-.success {
-  color: green;
-  font-size: 0.9em;
-  margin: 10px 0;
-}
-
-/* Product Not Found */
-.product-not-found {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.back-to-shop {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #667eea;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
 }
 
 /* ========== FOOTER STYLES ========== */
@@ -481,7 +429,6 @@
   color: #fff;
 }
 
-/* Social Links */
 .social-links {
   display: flex;
   gap: 15px;
@@ -499,7 +446,6 @@
   transform: translateY(-3px);
 }
 
-/* Newsletter */
 .newsletter {
   display: flex;
   flex-direction: column;
@@ -534,7 +480,6 @@
   background-color: #ddd;
 }
 
-/* Footer Bottom */
 .footer-bottom {
   display: flex;
   flex-wrap: wrap;
@@ -567,22 +512,10 @@
 }
 
 /* ========== RESPONSIVE MEDIA QUERIES ========== */
-@media (max-width: 1200px) {
-  .product-card {
-    width: 260px;
-  }
-}
-
-@media (max-width: 900px) {
-  .product-card {
-    width: 240px;
-  }
-}
-
 @media (max-width: 768px) {
-  .product-card {
-    width: calc(50% - 20px);
-    min-width: 200px;
+  .product-container {
+    flex-direction: column;
+    padding: 20px;
   }
   
   .home-title {
@@ -593,9 +526,9 @@
     font-size: 1.8em;
   }
   
-  .product-container {
-    flex-direction: column;
-    padding: 20px;
+  .product-card {
+    width: calc(50% - 20px);
+    min-width: 200px;
   }
   
   .footer {
@@ -634,6 +567,10 @@
     left: 0;
     text-align: center;
   }
+  
+  .below-image {
+    height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -646,12 +583,9 @@
     height: 300px;
   }
   
-  .below-image {
-    height: 300px;
-  }
-  
   .green-image {
     width: 100%;
     height: auto;
   }
 }
+

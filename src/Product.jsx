@@ -1,9 +1,8 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
 
-// THIS MUST MATCH the products in your Home.jsx
-// Index 0 = id 1, Index 1 = id 2, etc.
+
 const products = {
   1: { name: "Vintage Baseball Cap", price: 49.99, image: "/baseball.jpg" },
   2: { name: "Classic Vintage Cap", price: 39.99, image: "/Cap.jpg" },
@@ -25,6 +24,7 @@ const products = {
 
 function Product() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const productId = Number(id);
   const product = products[productId];
 
@@ -40,6 +40,29 @@ function Product() {
 
   return (
     <div className="product-container">
+      {/* Mobile Back Button */}
+      <button 
+        onClick={() => navigate(-1)} 
+        className="mobile-back-btn"
+        style={{
+          backgroundColor: '#6c757d',
+          color: 'white',
+          border: 'none',
+          padding: '10px 18px',
+          borderRadius: '30px',
+          fontSize: '14px',
+          marginBottom: '20px',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          cursor: 'pointer',
+          width: 'auto',
+          alignSelf: 'flex-start'
+        }}
+      >
+        ← Back
+      </button>
+
       <div className="product-image">
         <img src={product.image} alt={product.name} />
       </div>

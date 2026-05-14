@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
+  
   // Array of all product images
   const productImages = [
     { src: "baseball.jpg", alt: "Baseball", name: "Vintage Baseball Cap" },
@@ -24,6 +26,15 @@ function Home() {
 
   return (
     <>
+      {/* Back button to START page */}
+      <div style={{ padding: '20px 20px 0 20px' }}>
+        <button 
+          onClick={() => navigate('/')} 
+          className="back-btn"
+        >
+          ← Back to Start
+        </button>
+      </div>
 
       <div className="home-container">
         <h2 className="section-title">Shop All Products</h2>
@@ -43,74 +54,73 @@ function Home() {
         </div>
       </div>
 
-        
-<footer className="footer">
-  <div className="footer-container">
-    <div className="footer-column">
-      <h3>Lets Get Vintage</h3>
-      <p>Your go-to destination for vintage style and timeless fashion.</p>
-      <div className="social-links">
-        <a href="#"><i className="bi bi-instagram"></i></a>
-        <a href="#"><i className="bi bi-facebook"></i></a>
-        <a href="#"><i className="bi bi-twitter-x"></i></a>
-        <a href="#"><i className="bi bi-tiktok"></i></a>
-        <a href="#"><i className="bi bi-pinterest"></i></a>
-      </div>
-    </div>
+      <footer className="footer">
+        <div className="footer-container">
+          <div className="footer-column">
+            <h3>Lets Get Vintage</h3>
+            <p>Your go-to destination for vintage style and timeless fashion.</p>
+            <div className="social-links">
+              <a href="#"><i className="bi bi-instagram"></i></a>
+              <a href="#"><i className="bi bi-facebook"></i></a>
+              <a href="#"><i className="bi bi-twitter-x"></i></a>
+              <a href="#"><i className="bi bi-tiktok"></i></a>
+              <a href="#"><i className="bi bi-pinterest"></i></a>
+            </div>
+          </div>
 
-    <div className="footer-column">
-      <h3>Shop</h3>
-      <ul>
-        <li><a href="/Home">All Products</a></li>
-        <li><a href="/Home">New Arrivals</a></li>
-        <li><a href="/Home">Best Sellers</a></li>
-        <li><a href="/Home">Vintage Collection</a></li>
-        <li><a href="/Home">Sale</a></li>
-      </ul>
-    </div>
+          <div className="footer-column">
+            <h3>Shop</h3>
+            <ul>
+              <li><a href="/Home">All Products</a></li>
+              <li><a href="/Home">New Arrivals</a></li>
+              <li><a href="/Home">Best Sellers</a></li>
+              <li><a href="/Home">Vintage Collection</a></li>
+              <li><a href="/Home">Sale</a></li>
+            </ul>
+          </div>
 
-    <div className="footer-column">
-      <h3>Support</h3>
-      <ul>
-        <li><a href="/Home">FAQ</a></li>
-        <li><a href="/Home">Shipping & Returns</a></li>
-        <li><a href="/Home">Size Guide</a></li>
-        <li><a href="/Home">Contact Us</a></li>
-        <li><a href="/Home">Track Order</a></li>
-      </ul>
-    </div>
+          <div className="footer-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="/Home">FAQ</a></li>
+              <li><a href="/Home">Shipping & Returns</a></li>
+              <li><a href="/Home">Size Guide</a></li>
+              <li><a href="/Home">Contact Us</a></li>
+              <li><a href="/Home">Track Order</a></li>
+            </ul>
+          </div>
 
-    <div className="footer-column">
-      <h3>Company</h3>
-      <ul>
-        <li><a href="/Home">About Us</a></li>
-        <li><a href="/Home">Sustainability</a></li>
-        <li><a href="/Home">Careers</a></li>
-        <li><a href="/Home">Privacy Policy</a></li>
-        <li><a href="/Home">Terms of Service</a></li>
-      </ul>
-    </div>
+          <div className="footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="/Home">About Us</a></li>
+              <li><a href="/Home">Sustainability</a></li>
+              <li><a href="/Home">Careers</a></li>
+              <li><a href="/Home">Privacy Policy</a></li>
+              <li><a href="/Home">Terms of Service</a></li>
+            </ul>
+          </div>
 
-    <div className="footer-column">
-      <h3>Newsletter</h3>
-      <p>Subscribe for 10% off your first order</p>
-      <div className="newsletter">
-        <input type="email" placeholder="Your email address" />
-        <button>Subscribe</button>
-      </div>
-    </div>
-  </div>
+          <div className="footer-column">
+            <h3>Newsletter</h3>
+            <p>Subscribe for 10% off your first order</p>
+            <div className="newsletter">
+              <input type="email" placeholder="Your email address" />
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
 
-  <div className="footer-bottom">
-    <p>&copy; 2026 Lets Get Vintage. All rights reserved.</p>
-    <div className="payment-icons">
-      <i className="bi bi-credit-card"></i>
-      <i className="bi bi-paypal"></i>
-      <i className="bi bi-apple"></i>
-      <i className="bi bi-google"></i>
-    </div>
-  </div>
-</footer>
+        <div className="footer-bottom">
+          <p>&copy; 2026 Lets Get Vintage. All rights reserved.</p>
+          <div className="payment-icons">
+            <i className="bi bi-credit-card"></i>
+            <i className="bi bi-paypal"></i>
+            <i className="bi bi-apple"></i>
+            <i className="bi bi-google"></i>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
